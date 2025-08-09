@@ -1,0 +1,223 @@
+:root {
+    --background: #202C37;
+    --elements: #2B3945;
+    --text: #FFFFFF;
+    --input-text: #FFFFFF;
+    --shadow: rgba(0, 0, 0, 0.08);
+    --accent: #4daaf2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: var(--elements);
+    box-shadow: 0 4px 12px 0 var(--shadow);
+    padding: 24px 0;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+main {
+    padding: 40px 0;
+}
+
+/* CONTROLS CARD */
+.controls-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--elements);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px 0 var(--shadow);
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 50px auto;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--background);
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 300px;
+}
+
+#search-input {
+    background-color: transparent;
+    border: none;
+    padding: 15px 20px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--input-text);
+    width: 100%;
+}
+
+#search-input::placeholder {
+    color: var(--input-text);
+    opacity: 0.8;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    color: var(--input-text);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.search-button:hover {
+    color: var(--accent);
+}
+
+#search-filter {
+    background-color: var(--background);
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-family: inherit;
+    font-size: 14px;
+    min-width: 200px;
+    cursor: pointer;
+}
+
+/* UPDATED COUNTRY CARD STYLING */
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 50px;
+}
+
+/* use flexbox for the footer alignment!!! */
+.country-card {
+    background-color: var(--elements);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px 0 var(--shadow);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.country-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 30px 25px;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.card-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-details li {
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.card-details li strong {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+/* make the gap smaller */
+.neighbours-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.neighbours-list span {
+    background-color: var(--background);
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* style the link, change the styling*/
+.card-footer {
+    padding: 0 25px 25px 25px;
+}
+
+.card-footer a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    padding: 8px 15px;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card-footer a:hover {
+    background-color: var(--accent);
+    color: var(--elements);
+}
+
+footer {
+    padding: 2% 2%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--elements);
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
