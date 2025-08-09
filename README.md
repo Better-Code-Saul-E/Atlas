@@ -5,7 +5,7 @@ A clean and responsive web application that allows users to explore countries ar
 
 ## Live Demo
 
-You can view the live application here: **[ATLAS](https://better-code-saul-e.github.io/Atlas/)**
+You can view the live application here: **[ATLAS](https://better-code-saul-e.github.io/Atlas/index.html)**
 
 ## Features
 * **Live Search:** Dynamically search for countries by name.
